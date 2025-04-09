@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog API - Endpoints</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            border-bottom: 1px solid #e1e1e1;
+            padding-bottom: 20px;
+        }
+        h1 {
+            font-size: 2.5rem;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+        }
+        .endpoints-container {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+        .endpoint {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 6px;
+            background-color: #ecf0f1;
+            transition: all 0.3s;
+        }
+        .endpoint:hover {
+            background-color: #e2e8ea;
+            transform: translateY(-2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .endpoint-name {
+            font-weight: bold;
+            min-width: 120px;
+            color: #3498db;
+        }
+        .endpoint-url {
+            flex-grow: 1;
+        }
+        .endpoint-url a {
+            color: #2c3e50;
+            text-decoration: none;
+        }
+        .endpoint-url a:hover {
+            text-decoration: underline;
+        }
+        .home-link {
+            display: inline-block;
+            margin-top: 20px;
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-decoration: none;
+        }
+        .home-link:hover {
+            background-color: #2980b9;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 0.9rem;
+            border-top: 1px solid #e1e1e1;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Blog API Endpoints</h1>
+            <div class="subtitle">Browse and interact with the available API endpoints</div>
+        </header>
+        
+        <div class="endpoints-container">
+            <h2>Available Endpoints</h2>
+            
+            <div class="endpoint">
+                <div class="endpoint-name">Categories:</div>
+                <div class="endpoint-url"><a href="{{ endpoints.categories }}">{{ endpoints.categories }}</a></div>
+            </div>
+            
+            <div class="endpoint">
+                <div class="endpoint-name">Tags:</div>
+                <div class="endpoint-url"><a href="{{ endpoints.tags }}">{{ endpoints.tags }}</a></div>
+            </div>
+            
+            <div class="endpoint">
+                <div class="endpoint-name">Articles:</div>
+                <div class="endpoint-url"><a href="{{ endpoints.articles }}">{{ endpoints.articles }}</a></div>
+            </div>
+            
+            <div class="endpoint">
+                <div class="endpoint-name">Comments:</div>
+                <div class="endpoint-url"><a href="{{ endpoints.comments }}">{{ endpoints.comments }}</a></div>
+            </div>
+            
+   
+            
+            <a href="/" class="home-link">Back to Home</a>
+        </div>
+        
+        <footer>
+            &copy; 2025 Blog API - Built with Django Rest Framework
+        </footer>
+    </div>
+</body>
+</html>
