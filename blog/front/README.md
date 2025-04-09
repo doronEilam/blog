@@ -30,6 +30,7 @@ The project includes forms for registration, login, and logout, as well as a ded
 Run the following command in the terminal to install the required libraries:
 ```bash
 pip install -r requirements.txt
+venv\Scripts\activate
 ```
 
 ### Running the Backend
